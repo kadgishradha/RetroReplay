@@ -10,6 +10,8 @@ import { HomeComponent } from './components/commom/home/home.component';
 import { AboutComponent } from './components/commom/about/about.component';
 import { FooterComponent } from './components/commom/footer/footer.component';
 import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
+import { Game2048Component } from './components/games/game2048/game2048.component';
+import { TileComponent } from './components/games/game2048/tile/tile.component';
 // import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ConnectFourComponent } from './components/games/connect-four/connect-fo
     AboutComponent,
     FooterComponent,
     ConnectFourComponent,
+    Game2048Component,
+    TileComponent,
     // ConnectFourComponent
   ],
   imports: [

@@ -1,0 +1,81 @@
+.tic-tac-toe-container{
+    margin-top: 9%;
+}
+.rules {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.rules-text {
+    text-align: left;
+    padding: 20px;
+}
+
+.rules-text ol {
+    margin: 0;
+    padding: 0;
+}
+
+.rules-text li {
+    margin-bottom: 10px;
+}
+
+.start-again-button{
+    width: 200px;
+    margin-top: 20px;
+}
+  
+  .grid-container {
+    // display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-row {
+    display: flex;
+  }
+  
+  .grid-cell {
+    flex: 1;
+    background-color: #9fbce7;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+  
+  .tile-0 {
+    background-color: #cdc1b4;
+    color: #776e65;
+  }
+  
+  /* Define different colors for different tile values */
+  .tile-2 { background-color: #eee4da; color: #776e65; }
+  .tile-4 { background-color: #ede0c8; color: #776e65; }
+  .tile-8 { background-color: #f2b179; color: white; }
+  .tile-16 { background-color: #f59563; color: white; }
+  .tile-32 { background-color: #f67c5f; color: white; }
+  .tile-64 { background-color: #f65e3b; color: white; }
+  .tile-128 { background-color: #edcf72; color: white; }
+  .tile-256 { background-color: #edcc61; color: white; }
+  .tile-512 { background-color: #edc850; color: white; }
+  .tile-1024 { background-color: #edc53f; color: white; }
+  .tile-2048 { background-color: #edc22e; color: white; }
+  /* Add styles for higher values as per your preference */
+  
+  .game-board {
+    width: 400px;
+    height: 375px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  .score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #9fbce7;
+  }

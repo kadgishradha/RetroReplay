@@ -2,7 +2,7 @@
     <div class="row col-6">
         <div class="col text-center">
             <h1 class="text-dark">Tic Tac Toe</h1>
-            <p class="lead">Play the classic game of Tic Tac Toe</p>
+            <p class="lead">Play the classic game of Tic Tac Toe!</p>
         </div>
 
         <div class="board">
@@ -15,8 +15,8 @@
         <button type="button" class="btn btn-dark start-again-button" (click)="startNewGame()">Start New Game</button>
 
         <div *ngIf="winner !== null" class="winner-message">
-            <span *ngIf="winner === 'Tie'">It's a tie!</span>
-            <span *ngIf="winner !== 'Tie'">Winner: {{ winner }}</span>
+            <h2 *ngIf="winner === 'Tie'">It's a tie!</h2>
+            <h2 *ngIf="winner !== 'Tie'">Winner: {{ winner }}</h2>
         </div>
     </div>
     <div class="rules col-6">

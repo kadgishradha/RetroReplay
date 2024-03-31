@@ -18,12 +18,12 @@
   }
   
   .navbar-nav {
-    display: flex;
+    display: block;
     align-items: center;
   }
   
   .navbar-nav .nav-item {
-    margin-right: 10px;
+    margin-right: 50px;
   }
   
   .navbar-nav .nav-link {
@@ -36,5 +36,9 @@
   
   .active {
     font-weight: bold;
+  }
+
+  .nav-item {
+    float: left;
   }
   

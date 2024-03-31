@@ -1,0 +1,64 @@
+<div class="container d-flex text-center tic-tac-toe-container">
+    <div class="row col-6">
+        <div class="text-center">
+            <h1 class="text-dark">Game 2048</h1>
+            <p class="lead">Play the classic game of 2048!</p>
+        </div>
+
+        <div class="board-container text-center">
+        <div class="game-board">
+            <div class="score">Score: {{ score }}</div>
+            <div class="grid-container">
+              <div class="grid-row" *ngFor="let row of grid">
+                <div class="grid-cell" *ngFor="let cell of row">
+                  <app-tile [value]="cell"></app-tile>
+                </div> <br>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-dark start-again-button" (click)="startAgain()">Start New Game</button>
+          <div *ngIf="gameWon" class="message">
+            <p>Congratulations! You have reached 2048!</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="rules col-6">
+        <span class="rules-text">
+            <strong>Rules of Game 2048</strong>
+            <hr>
+            <ol>
+                <li>
+                    <strong>Game Grid:</strong> The game is played on a 4x4 grid, totaling 16 cells. Each cell can contain a tile with a
+                    numerical value.
+                </li>
+                <li>
+                    <strong>Initial Setup:</strong> At the start of the game, two tiles are randomly placed on the grid. These tiles can
+                    have a value of either 2 or 4.
+                </li>
+                <li>
+                    <strong>Tile Movement:</strong> The player can move tiles in four directions: up, down, left, or right. When the
+                    player chooses a direction, all tiles on the grid shift as far as possible in that direction until they reach the
+                    edge of the grid or collide with another tile.
+                </li>
+                <li>
+                    <strong>Merging Tiles:</strong> When two tiles with the same value collide while moving, they merge into a single
+                    tile. The value of the merged tile is the sum of the values of the two tiles that collided. For example, if two
+                    tiles with a value of 2 collide, they merge into a single tile with a value of 4.
+                </li>
+                <li>
+                    <strong>Adding New Tiles:</strong> After each move, a new tile with a value of either 2 or 4 appears on an empty
+                    spot on the grid. The placement of the new tile is random.
+                </li>
+                <li>
+                    <strong>Win Condition:</strong> The game is won when a tile with a value of 2048 is created. Once the player
+                    achieves this, they have successfully won the game.
+                </li>
+                <li>
+                    <strong>Game Over Condition:</strong> The game ends when there are no more empty spots on the grid and no possible
+                    moves can be made. This condition results in a game over.
+                </li>
+            </ol>
+        </span>
+    </div>
+</div>
