@@ -1,0 +1,38 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-image: url("https://www.veeforu.com/wp-content/uploads/2023/10/Purple-Virtual-Horizons-HD-Gaming-Backgrounds-with-Ultra-Realistic-4K-Sci-Fi-HUD.jpg");
+    padding-top: 100px; /* Adjust according to your header height */
+  }
+  
+  .sidebar ul {
+    padding-left: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+
+  .li{
+    padding-left: 25px;
+  }
+  
+  .sidebar a {
+    color: #fff; /* Dark theme text color */
+    text-decoration: none;
+    padding: 10px 10px 10px 30px;
+    display: block;
+  }
+  
+  .sidebar li:hover {
+    background-color: #5f68e6; /* Dark theme hover background color */
+  }
+  
+  .content {
+    margin-left: 250px; /* Adjust according to sidebar width */
+    padding: 20px;
+  }
+  

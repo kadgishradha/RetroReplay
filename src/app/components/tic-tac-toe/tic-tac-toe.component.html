@@ -1,0 +1,41 @@
+<div class="container d-flex align-items-center tic-tac-toe-container">
+    <div class="row col-6">
+        <div class="col text-center">
+            <h1 class="text-dark">Tic Tac Toe</h1>
+            <p class="lead">Play the classic game of Tic Tac Toe</p>
+        </div>
+
+        <div class="board">
+            <div *ngFor="let row of board; let i = index" class="row">
+                <div *ngFor="let cell of row; let j = index" class="cell" (click)="makeMove(i, j)">
+                    {{ cell }}
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark start-again-button" (click)="startNewGame()">Start New Game</button>
+
+        <div *ngIf="winner !== null" class="winner-message">
+            <span *ngIf="winner === 'Tie'">It's a tie!</span>
+            <span *ngIf="winner !== 'Tie'">Winner: {{ winner }}</span>
+        </div>
+    </div>
+    <div class="rules col-6">
+        <span class="rules-text">
+            <strong>Rules of Tic Tac Toe</strong>
+            <hr>
+            <ol>
+                <li>Objective: The game is played on a 3x3 grid. The objective is to be the first player to form a
+                    horizontal, vertical, or diagonal line of three of your symbols (X or O) in a row.</li>
+                <li>Players: The game is typically played by two players, who take turns placing their symbol (X or O)
+                    in an empty cell of the grid.</li>
+                <li>Starting the Game: The game starts with an empty grid.</li>
+                <li>Taking Turns: Players take turns alternately. The player using X usually goes first.</li>
+                <li>Placing Symbols: On your turn, you place your symbol (X or O) into an empty cell of the grid.</li>
+                <li>Winning: If a player succeeds in placing three of their symbols in a horizontal, vertical, or
+                    diagonal row, that player wins the game.</li>
+                <li>Draw (Tie): If all cells are filled and no player has formed a winning line, the game is a draw
+                    (tie).</li>
+            </ol>
+        </span>
+    </div>
+</div>
