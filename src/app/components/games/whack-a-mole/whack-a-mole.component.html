@@ -1,0 +1,115 @@
+<div class="container d-flex align-items-center tic-tac-toe-container">
+    <div class="row col-6 justify-content-center">
+        <div class="col text-center">
+            <h1 class="text-dark">Whack a Mole</h1>
+            <p class="lead">Play the classic game of Whack a Mole!</p>
+        </div>
+        <div class="game">
+            <div class="scoreboard">
+                <span class="btn btn-outline-secondary" style="margin-right: 30px;">Score: {{ score }}</span>
+                <span class="btn btn-outline-secondary">Time Left: {{ timeLeft }}</span>
+            </div>
+            <div class="grid">
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+                <div class="mole-hole"></div>
+            </div>
+            <div *ngIf="!gameStarted" class="end-game">
+                <h2>Game Over!</h2>
+                <p>Your score: {{ score }}</p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark start-again-button" (click)="playAgain()">Play Again</button>
+    </div>
+
+    <div class="rules col-6">
+        <span class="rules-text">
+            <strong>Rules of Whack a Mole</strong>
+            <hr>
+            <ol>
+                <li>
+                    <strong>Objective:</strong> Your objective is to whack as many moles as possible within the given
+                    time frame.
+                </li>
+                <li>
+                    <strong>Gameplay:</strong> Click on the moles as they pop up from their holes. Each successful hit
+                    earns you points.
+                </li>
+                <li>
+                    <strong>Scoring:</strong> You earn 10 points for each successful mole whack.
+                </li>
+                <li>
+                    <strong>Bombs:</strong> Be careful not to click on bombs! Each bomb clicked will deduct 5 points
+                    from your score.
+                </li>
+                <li>
+                    <strong>Duration:</strong> The game lasts for a set duration of 30 seconds. You must score as many
+                    points as possible within this time frame.
+                </li>
+                <li>
+                    <strong>Game Over:</strong> When the time runs out, the game ends. Your final score will be
+                    displayed on the screen.
+                </li>
+                <li>
+                    <strong>Play Again:</strong> You can play the game again to beat your high score. Click the "Play
+                    Again" button to start a new game.
+                </li>
+            </ol>
+        </span>
+    </div>
+</div>

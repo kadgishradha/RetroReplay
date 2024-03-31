@@ -1,0 +1,86 @@
+.tic-tac-toe-container {
+    margin-top: 7%;
+}
+
+.rules {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.rules-text {
+    text-align: left;
+    padding: 20px;
+}
+
+.rules-text ol {
+    margin: 0;
+    padding: 0;
+}
+
+.rules-text li {
+    margin-bottom: 10px;
+}
+
+.start-again-button {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.game {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    height: 300px;
+    margin: 20px;
+    width: 530px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.mole {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bomb {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.end-game {
+    margin-top: 20px;
+}
+
+.end-game button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scoreboard {
+    margin-bottom: 20px;
+}
+
+.rules {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.rules ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}

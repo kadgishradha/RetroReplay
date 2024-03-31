@@ -9,6 +9,7 @@ import { FooterComponent } from './components/commom/footer/footer.component';
 import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
 import { Game2048Component } from './components/games/game2048/game2048.component';
 import { HangmanComponent } from './components/games/hangman/hangman.component';
+import { WhackAMoleComponent } from './components/games/whack-a-mole/whack-a-mole.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'connect-four', component: ConnectFourComponent },
   { path: 'game-2048', component: Game2048Component },
   { path: 'hangman', component: HangmanComponent },
-  // { path: 'connect-four', component: ConnectFourComponent },
+  { path: 'mole', component: WhackAMoleComponent },
   // { path: 'connect-four', component: ConnectFourComponent },
 
 ];
