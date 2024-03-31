@@ -13,6 +13,7 @@ import { ConnectFourComponent } from './components/games/connect-four/connect-fo
 import { Game2048Component } from './components/games/game2048/game2048.component';
 import { TileComponent } from './components/games/game2048/tile/tile.component';
 import { HangmanComponent } from './components/games/hangman/hangman.component';
+import { ContactComponent } from './components/commom/contact/contact.component';
 // import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HangmanComponent } from './components/games/hangman/hangman.component';
     Game2048Component,
     TileComponent,
     HangmanComponent,
+    ContactComponent,
     // ConnectFourComponent
   ],
   imports: [
