@@ -1,0 +1,45 @@
+<div class="container  d-flex text-center connect-four-container">
+    <div class="col-6 board-container">
+        <div class="col text-center">
+            <h1 class="text-dark">Connect Four</h1>
+            <p class="lead">Play the classic game of Connect Four</p>
+        </div>
+        <div class="board">
+            <div class="row" *ngFor="let row of rows; let i = index">
+                <div class="cell" *ngFor="let cell of row; let j = index" (click)="dropPiece(j)">
+                    <div [ngClass]="{'empty': cell === 0, 'red': cell === 1, 'yellow': cell === 2}"></div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark start-again-button" (click)="reset()">Play Again</button>
+        <div *ngIf="winner" class="winner">
+            <h2>Player {{ winner === 1 ? 'Red' : 'Yellow' }} Wins!</h2>
+        </div>
+    </div>
+
+    <div class="rules col-6">
+        <span class="rules-text">
+            <strong>Rules of Connect Four</strong>
+            <hr>
+            <ol>
+                <li><strong>Objective:</strong> Connect Four is a two-player strategy game where the goal is to be the
+                    first to form a horizontal, vertical, or diagonal line of four of one's own discs.</li>
+                <li><strong>Setup:</strong> The game is played on a vertical grid board with 6 rows and 7 columns. Each
+                    player is assigned a color, usually red or yellow.</li>
+                <li><strong>Turns:</strong> Players take turns dropping a colored disc into one of the columns. The
+                    discs fall down to the lowest unoccupied position within the selected column.</li>
+                <li><strong>Winning Condition:</strong> The game is won by the player who successfully connects four of
+                    their own colored discs in a row, either horizontally, vertically, or diagonally.</li>
+                <li><strong>Vertical Win:</strong> A player wins if they connect four of their discs vertically in a
+                    column.</li>
+                <li><strong>Horizontal Win:</strong> A player wins if they connect four of their discs horizontally in a
+                    row.</li>
+                <li><strong>Diagonal Win:</strong> A player wins if they connect four of their discs diagonally along a
+                    slope.</li>
+                <li><strong>Draw:</strong> If all columns are filled without either player achieving a winning
+                    condition, the game ends in a draw.</li>
+
+            </ol>
+        </span>
+    </div>
+</div>
