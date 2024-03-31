@@ -12,6 +12,7 @@ import { FooterComponent } from './components/commom/footer/footer.component';
 import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
 import { Game2048Component } from './components/games/game2048/game2048.component';
 import { TileComponent } from './components/games/game2048/tile/tile.component';
+import { HangmanComponent } from './components/games/hangman/hangman.component';
 // import { ConnectFourComponent } from './components/games/connect-four/connect-four.component';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { TileComponent } from './components/games/game2048/tile/tile.component';
     ConnectFourComponent,
     Game2048Component,
     TileComponent,
+    HangmanComponent,
     // ConnectFourComponent
   ],
   imports: [

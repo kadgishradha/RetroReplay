@@ -1,0 +1,65 @@
+<div class="container d-flex text-center tic-tac-toe-container">
+    <div class="row col-6">
+        <div class="col text-center">
+            <h1 class="text-dark">Word Guess</h1>
+            <p class="lead">Play the classic game of Word Guessing!</p>
+        </div>
+        <div class="board">
+            <div *ngIf="!gameOver" class="main-board">
+                <h3>Hidden Word: {{ hiddenWord.join(' ') }}</h3>
+                <h5>Guessed Letters: {{ displayGuessedLetters() }}</h5>
+                <p *ngIf="incorrectGuesses > 0">Incorrect Guesses: {{ incorrectGuesses }}/{{ maxIncorrectGuesses }}</p>
+                <div *ngFor="let part of hangmanParts" class="hangman-part"
+                    [ngClass]="{ 'visible': part <= incorrectGuesses }"></div>
+                <div class="letters">
+                    <button *ngFor="let letter of alphabet" (click)="guessLetter(letter)"
+                        [disabled]="guessedLetters.has(letter) || gameOver">{{ letter }}</button>
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark start-again-button" (click)="playAgain()">Play Again</button>
+            <div *ngIf="gameOver">
+                <h2 *ngIf="gameWon">Congratulations! You guessed the word!</h2>
+                <h2 *ngIf="!gameWon">Game Over! The word was: {{ word }}</h2>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="rules col-6">
+        <span class="rules-text">
+            <strong>Rules of Word Guess</strong>
+            <hr>
+            <ol class="rules-ol">
+                <li>
+                    <strong>Objective:</strong> Guess the hidden word by selecting letters one at a time.
+                </li>
+                <li>
+                    <strong>Gameplay:</strong> You will be presented with a hidden word represented by dashes, each dash
+                    representing a letter in the word.
+                    Guess the letters one by one. If the guessed letter is in the word, it will be revealed in its
+                    corresponding position(s). If the letter is not in the word, you will receive a strike.
+                </li>
+                <li>
+                    <strong>Strikes:</strong> You have a limited number of incorrect guesses before the game ends. Once
+                    you reach the maximum number of strikes, the game is over.
+                </li>
+                <li>
+                    <strong>Winning:</strong> If you successfully guess all the letters in the word before accumulating
+                    too many strikes, you win the game.
+                </li>
+                <li>
+                    <strong>Hint:</strong> Some games may offer hints or categories to help you guess the word. Use them
+                    wisely!
+                </li>
+                <li>
+                    <strong>Play Again:</strong> After completing a game, you have the option to play again and try to
+                    beat your previous score.
+                </li>
+                <li>
+                    <strong>Have Fun:</strong> Word Guess is a fun and challenging game. Enjoy the process of unraveling
+                    words and expanding your vocabulary!
+                </li>
+            </ol>
+        </span>
+    </div>
+</div>
